@@ -162,25 +162,11 @@ h3 { font-size: 18px; }
   height: 84px;
   gap: 12px;
 }
-.brand { display: flex; align-items: baseline; gap: 14px; min-width: 0; }
-.brand-logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-.brand-logo .wordmark {
-  font-size: 24px;
-  font-weight: 900;
-  color: var(--color-maroon);
-  letter-spacing: -.01em;
-  white-space: nowrap;
-}
-.brand-logo .mark {
-  width: 30px;
-  height: 6px;
-  margin-top: 4px;
-  border-bottom: 3px solid var(--color-maroon);
-  border-radius: 0 0 60% 60%;
+.brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.brand-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 .brand-tagline {
   font-size: 13px;
@@ -194,7 +180,7 @@ h3 { font-size: 18px; }
 }
 @media (max-width: 420px) {
   .site-header .container { height: 72px; }
-  .brand-logo .wordmark { font-size: 19px; }
+  .brand-logo-img { height: 28px; }
   .btn.btn-primary--sm { padding: 9px 14px; font-size: 12.5px; }
 }
 
@@ -235,26 +221,26 @@ h3 { font-size: 18px; }
   z-index: 1;
   display: flex;
   align-items: center;
-  min-height: clamp(460px, 46vw, 660px);
-  padding: 96px 0 64px;
+  min-height: clamp(420px, 40vw, 600px);
+  padding: 56px 0 36px;
 }
 .hero-copy { max-width: 560px; }
-.hero-copy .eyebrow { margin-bottom: 20px; }
+.hero-copy .eyebrow { margin-bottom: 14px; }
 .hero-copy h1 {
-  font-size: clamp(30px, 3.6vw, 42px);
+  font-size: clamp(28px, 3.2vw, 40px);
   letter-spacing: -.01em;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 .hero-copy .lede {
   font-size: 16px;
   color: var(--color-text-muted);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 32px;
+  gap: 8px;
+  margin-bottom: 22px;
 }
 .hero-tags li {
   background: rgba(255,255,255,.8);
@@ -262,11 +248,11 @@ h3 { font-size: 18px; }
   color: var(--color-text-muted);
   font-size: 13px;
   font-weight: 500;
-  padding: 9px 16px;
+  padding: 8px 14px;
   border-radius: var(--radius-pill);
 }
 .hero-disclaimer {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 12.5px;
   color: var(--color-text-faint);
 }
@@ -277,8 +263,8 @@ h3 { font-size: 18px; }
 
 /* Partner logos (inside hero, first view) --------------------------------- */
 .hero-partners {
-  margin-top: 36px;
-  padding: 24px;
+  margin-top: 22px;
+  padding: 16px 20px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(231, 233, 236, 0.9);
   border-radius: var(--radius-md);
@@ -286,10 +272,10 @@ h3 { font-size: 18px; }
   text-align: center;
 }
 .hero-partners-label {
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--color-text-muted);
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   text-align: center;
 }
 .hero-partners-row {
@@ -297,17 +283,17 @@ h3 { font-size: 18px; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 18px clamp(20px, 3vw, 36px);
-  margin: 0 0 10px;
+  gap: 14px clamp(18px, 2.6vw, 32px);
+  margin: 0 0 8px;
 }
 .hero-partners-row img {
-  height: clamp(38px, 5vw, 58px);
+  height: clamp(30px, 3.6vw, 46px);
   width: auto;
-  max-width: 180px;
+  max-width: 160px;
   object-fit: contain;
 }
 .hero-partners-note {
-  font-size: 11.5px;
+  font-size: 11px;
   color: var(--color-text-faint);
   margin: 0;
   text-align: center;
@@ -390,10 +376,20 @@ h3 { font-size: 18px; }
 .job-card .field { margin-bottom: 18px; }
 .job-card .field:last-child { margin-bottom: 0; }
 .job-card dt {
+  display: flex;
+  align-items: center;
   font-size: 12.5px;
   font-weight: 700;
   color: var(--color-text-muted);
   margin-bottom: 5px;
+}
+.field-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  margin-right: 6px;
+  flex-shrink: 0;
 }
 .job-card dd {
   margin: 0;
@@ -537,7 +533,7 @@ h3 { font-size: 18px; }
 /* ==========================================================================
    Process
    ========================================================================== */
-.process { padding: 0 0 96px; }
+.process { padding: 0 0 96px; text-align: center; }
 .process-row {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;

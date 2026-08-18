@@ -193,6 +193,13 @@ h3 { font-size: 18px; }
 .hero {
   position: relative;
   overflow: hidden;
+  background: #fff;
+}
+.hero-frame {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .hero-bg {
   position: absolute;
@@ -425,12 +432,16 @@ h3 { font-size: 18px; }
   font-size: 15px;
   font-weight: 700;
   color: var(--color-text);
+  line-height: 1.4;
 }
 .job-card .field--desc dd {
   font-weight: 400;
   font-size: 13.5px;
   color: var(--color-text-muted);
   line-height: 1.7;
+}
+.job-card dl > div:nth-child(1) dd {
+  min-height: 2.8em;
 }
 .job-card dl > div:nth-child(2) dd {
   color: var(--color-primary-hover);

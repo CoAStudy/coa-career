@@ -14,4 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
     prevBtn.addEventListener('click', function () { scrollByCard(-1); });
     nextBtn.addEventListener('click', function () { scrollByCard(1); });
   }
+
+  // GTM tracking: fire a custom event when a job card is clicked, before
+  // the browser navigates to the form page.
+  document.querySelectorAll('.job-card[data-job]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'job_card_click',
+        job_company: card.getAttribute('data-job')
+      });
+    });
+  });
 });

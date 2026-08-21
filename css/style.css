@@ -394,6 +394,7 @@ h3 { font-size: 18px; }
 .positions-track::-webkit-scrollbar { display: none; }
 
 .job-card {
+  display: block;
   scroll-snap-align: start;
   background: #fff;
   border: 1px solid var(--color-border);
@@ -401,6 +402,7 @@ h3 { font-size: 18px; }
   border-top: 3px solid var(--color-primary);
   padding: 28px 28px;
   box-shadow: var(--shadow-card);
+  cursor: pointer;
   transition: box-shadow .2s ease, transform .2s ease;
 }
 .job-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-2px); }
@@ -516,29 +518,15 @@ h3 { font-size: 18px; }
 .voice-card {
   background: #fff;
   border-radius: var(--radius-md);
+  border-top: 3px solid var(--color-primary);
   padding: 32px;
   box-shadow: var(--shadow-card);
 }
 .voice-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   margin-bottom: 18px;
 }
-.voice-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--color-primary-soft);
-  color: var(--color-accent);
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.voice-role { font-weight: 700; font-size: 15px; }
-.voice-age { font-size: 12.5px; color: var(--color-text-faint); }
+.voice-role { font-weight: 700; font-size: 16px; }
+.voice-age { font-size: 12.5px; color: var(--color-text-faint); margin-top: 2px; }
 .voice-quote {
   color: var(--color-accent);
   font-weight: 700;
@@ -568,30 +556,16 @@ h3 { font-size: 18px; }
   gap: 24px;
 }
 .offer-card {
-  background: var(--color-bg-light);
+  background: var(--color-primary-soft);
   border-radius: var(--radius-md);
   padding: 28px 24px;
 }
-.offer-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--color-primary-soft);
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.offer-icon svg { width: 24px; height: 24px; }
 .offer-card h3 { font-size: 16px; margin-bottom: 10px; }
 .offer-card p { font-size: 13.5px; color: var(--color-text-muted); margin: 0; }
 
 @media (max-width: 900px) {
   .offer-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .offer-card { padding: 18px 16px; }
-  .offer-icon { width: 40px; height: 40px; margin-bottom: 12px; }
-  .offer-icon svg { width: 20px; height: 20px; }
 }
 @media (max-width: 520px) {
   .offer-grid { grid-template-columns: 1fr; }

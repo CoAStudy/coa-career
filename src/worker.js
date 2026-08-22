@@ -36,8 +36,10 @@ async function handleSubmit(request, env) {
     return json({ ok: false, error: "slack_not_configured" }, 500);
   }
 
+  const mention = env.SLACK_MENTION ? env.SLACK_MENTION + "\n" : "";
+
   const text = [
-    "📝 新しいキャリア面談のお申し込みがありました",
+    mention + "📝 新しいキャリア面談のお申し込みがありました",
     `・お名前: ${name}`,
     `・メールアドレス: ${email}`,
     `・電話番号: ${phone}`,

@@ -228,7 +228,7 @@
     submitBtn.disabled = true;
     submitBtn.textContent = '送信中…';
 
-    fetch('/api/submit', {
+    fetch('https://coa-career.coastudy.workers.dev/api/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

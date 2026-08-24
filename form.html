@@ -40,15 +40,16 @@
   .field-group { margin-bottom: 24px; }
   .field-group:last-of-type { margin-bottom: 0; }
   .field-group label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: block;
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
+    line-height: 1.6;
   }
   .field-group label .required {
-    display: inline-flex;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
     color: var(--color-maroon);
     background: var(--color-primary-soft);
     font-size: 11px;
@@ -147,7 +148,7 @@
             </div>
 
             <div class="field-group" data-field="phone">
-              <label for="phone">電話番号<span class="required">必須</span></label>
+              <label for="phone">携帯電話番号（または日中連絡の取れる電話番号）<span class="required">必須</span></label>
               <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="例：09012345678">
               <p class="field-error">正しい電話番号を入力してください(ハイフンなしの数字のみ)。</p>
             </div>
@@ -156,12 +157,21 @@
               <label for="field">研究領域<span class="required">必須</span></label>
               <select id="field" name="field">
                 <option value="">選択してください</option>
-                <option value="次世代半導体デバイス開発">次世代半導体デバイス開発</option>
-                <option value="電気回路設計">電気回路設計</option>
-                <option value="工場自動化・ロボット制御">工場自動化・ロボット制御</option>
-                <option value="組込みシステムエンジニア">組込みシステムエンジニア</option>
-                <option value="宇宙産業・ハードウェア設計">宇宙産業・ハードウェア設計</option>
-                <option value="先端物理シミュレーション研究">先端物理シミュレーション研究</option>
+                <option value="機械・機構">機械・機構</option>
+                <option value="電気・電子・FPGA">電気・電子・FPGA</option>
+                <option value="組込み・Firmware">組込み・Firmware</option>
+                <option value="制御・ロボティクス">制御・ロボティクス</option>
+                <option value="システム設計">システム設計</option>
+                <option value="技術系PM">技術系PM</option>
+                <option value="AI・機械学習・画像認識">AI・機械学習・画像認識</option>
+                <option value="通信・RF・信号処理">通信・RF・信号処理</option>
+                <option value="光学・レーザー・フォトニクス">光学・レーザー・フォトニクス</option>
+                <option value="半導体">半導体</option>
+                <option value="IT・Web">IT・Web</option>
+                <option value="CAE・解析">CAE・解析</option>
+                <option value="生産技術">生産技術</option>
+                <option value="量子">量子</option>
+                <option value="材料・化学">材料・化学</option>
                 <option value="その他">その他</option>
               </select>
               <p class="field-error">研究領域を選択してください。</p>
